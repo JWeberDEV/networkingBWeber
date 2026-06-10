@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(yarn add *)",
+      "Bash(yarn server *)",
+      "Bash(curl -s http://localhost:4000/api/health)",
+      "Bash(curl -s http://localhost:4000/api/establishments/categories)",
+      "Bash(curl -s \"http://localhost:4000/api/establishments?category=Sa%C3%BAde\")",
+      "Bash(curl -s -X POST http://localhost:4000/api/auth/login -H \"Content-Type: application/json\" -d \"{\\\\\"email\\\\\":\\\\\"ana@demo.com\\\\\",\\\\\"password\\\\\":\\\\\"demo1234\\\\\"}\")",
+      "Bash(yarn build *)",
+      "Bash(yarn dev:all)",
+      "Bash(curl -s http://localhost:3000/api/health)",
+      "mcp__Claude_Preview__preview_start",
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force -ErrorAction SilentlyContinue)",
+      "PowerShell(\"node processes stopped\")",
+      "Bash(curl -s http://localhost:3000/src/main.tsx)",
+      "Bash(curl -s -X POST http://localhost:4000/api/auth/login -H \"Content-Type: application/json\" -d '{\"email\":\"ana@demo.com\",\"password\":\"demo1234\"}')",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{const j=JSON.parse\\(s\\);console.log\\('unread:',j.unreadCount,'| total:',j.notifications.length\\);j.notifications.slice\\(0,5\\).forEach\\(n=>console.log\\('  -',n.targetType,'|',n.message\\)\\)}\\)\")",
+      "Bash(curl -s -X POST http://localhost:4000/api/auth/login -H \"Content-Type: application/json\" -d '{\"email\":\"rafael@demo.com\",\"password\":\"demo1234\"}')",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>console.log\\('unread after read-all:',JSON.parse\\(s\\).unreadCount\\)\\)\")",
+      "Bash(curl -s -X POST http://localhost:4000/api/auth/login -H \"Content-Type: application/json\" -d '{\"email\":\"carla@demo.com\",\"password\":\"demo1234\"}')",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{const j=JSON.parse\\(s\\);const read=j.notifications.filter\\(n=>n.isRead\\).length;console.log\\('unread:',j.unreadCount,'| read:',read,'| total:',j.notifications.length\\);const r=j.notifications.find\\(n=>n.message.includes\\('respondeu'\\)\\);console.log\\('a \\\\\"respondeu\\\\\" notif isRead:',r&&r.isRead\\)}\\)\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>console.log\\(JSON.parse\\(s\\).token\\)\\)\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{const j=JSON.parse\\(s\\);console.log\\('total msgs:',j.messages.length\\);console.log\\('last:',j.messages[j.messages.length-1].mine?'eu>':'ele>',j.messages[j.messages.length-1].body\\)}\\)\")",
+      "Bash(curl -s \"http://localhost:4000/api/establishments?city=Asunci%C3%B3n\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>console.log\\('count:',JSON.parse\\(s\\).establishments.length\\)\\)\")",
+      "Bash(curl -s \"http://localhost:4000/api/establishments?city=Ciudad%20del%20Este\")",
+      "Bash(curl -s \"http://localhost:4000/api/posts?city=Asunci%C3%B3n\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>console.log\\('count:',JSON.parse\\(s\\).posts.length\\)\\)\")",
+      "Bash(curl -s -X POST http://localhost:4000/api/auth/register -H \"Content-Type: application/json\" -d '{\"name\":\"Bruno CDE\",\"email\":\"bruno@teste.com\",\"password\":\"senha123\",\"role\":\"established\",\"city\":\"Ciudad del Este\"}')",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>console.log\\('criado em:',JSON.parse\\(s\\).establishment.city\\)\\)\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{const j=JSON.parse\\(s\\);console.log\\('count:',j.establishments.length, j.establishments.map\\(e=>e.name\\)\\)}\\)\")",
+      "Bash(curl -s \"http://localhost:4000/api/establishments?city=Gotham\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>console.log\\('Gotham count:',JSON.parse\\(s\\).establishments.length\\)\\)\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>console.log\\('city:',JSON.parse\\(s\\).user.city\\)\\)\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>console.log\\('city after name-only patch:',JSON.parse\\(s\\).user.city\\)\\)\")",
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{const u=JSON.parse\\(s\\).user;console.log\\('city:',u.city,'| isAdmin:',u.isAdmin\\)}\\)\")"
+    ]
+  }
+}

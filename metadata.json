@@ -1,0 +1,6 @@
+{
+  "name": "Conexão Transfronteiriça",
+  "description": "Plataforma de comércio de conexões e negócios bilaterais entre o Brasil e o Paraguai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
