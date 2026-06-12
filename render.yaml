@@ -1,0 +1,30 @@
+# Render Blueprint — deploy de serviço único (Express serve o frontend + a API).
+# Importe este repositório no Render como "Blueprint" e ele cria o serviço abaixo.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: conexao-br-py
+    runtime: node
+    plan: free
+    buildCommand: yarn install && yarn build
+    startCommand: yarn start
+    healthCheckPath: /api/health
+    envVars:
+      # Segredo de assinatura do JWT — gerado automaticamente pelo Render.
+      - key: JWT_SECRET
+        generateValue: true
+      # Node 22+ é necessário para o módulo node:sqlite.
+      - key: NODE_VERSION
+        value: "22"
+    # ──────────────────────────────────────────────────────────────────────────
+    # PERSISTÊNCIA (opcional): o plano "free" NÃO suporta disco persistente, então
+    # o banco SQLite é efêmero (reinicia no estado semeado a cada deploy/restart) —
+    # ótimo para uma demo. Para persistir dados, troque para um plano pago e
+    # descomente o bloco abaixo + a env DATA_DIR.
+    # ──────────────────────────────────────────────────────────────────────────
+    #   - key: DATA_DIR
+    #     value: /data
+    # disk:
+    #   name: data
+    #   mountPath: /data
+    #   sizeGB: 1

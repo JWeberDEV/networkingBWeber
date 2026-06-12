@@ -1,0 +1,10 @@
+node_modules
+dist
+server/data
+server/data-prodtest
+.git
+.github
+*.log
+.env*
+!.env.example
+.claude

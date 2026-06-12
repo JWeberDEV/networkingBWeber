@@ -12,6 +12,7 @@ Documentação completa do sistema. Comece pela visão geral e siga conforme a n
 | 06 | [Funcionalidades em detalhe](06-funcionalidades.md) | Como cada recurso funciona, ponta a ponta |
 | 07 | [Guia de desenvolvimento](07-desenvolvimento.md) | Setup, scripts, banco, “pegadinhas” e tarefas comuns |
 | 08 | [Roadmap](08-roadmap.md) | O que está pronto, o que foi adiado e próximos passos |
+| 09 | [Deploy](09-deploy.md) | Hospedar como serviço único (Render / Railway / Fly) |
 
 ## Resumo de 30 segundos
 

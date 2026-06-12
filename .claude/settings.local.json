@@ -37,7 +37,14 @@
       "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>console.log\\('Gotham count:',JSON.parse\\(s\\).establishments.length\\)\\)\")",
       "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>console.log\\('city:',JSON.parse\\(s\\).user.city\\)\\)\")",
       "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>console.log\\('city after name-only patch:',JSON.parse\\(s\\).user.city\\)\\)\")",
-      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{const u=JSON.parse\\(s\\).user;console.log\\('city:',u.city,'| isAdmin:',u.isAdmin\\)}\\)\")"
+      "Bash(node -e \"let s='';process.stdin.on\\('data',d=>s+=d\\).on\\('end',\\(\\)=>{const u=JSON.parse\\(s\\).user;console.log\\('city:',u.city,'| isAdmin:',u.isAdmin\\)}\\)\")",
+      "Bash(yarn install *)",
+      "Bash(NODE_ENV=production PORT=5000 DATA_DIR=./server/data-prodtest node --experimental-sqlite --import tsx server/src/index.ts)",
+      "Bash(curl -s http://localhost:5000/)",
+      "Bash(curl -s http://localhost:5000/api/health)",
+      "Bash(curl -s http://localhost:5000/perfil)",
+      "Bash(curl -s \"http://localhost:5000/api/establishments?city=Asunci%C3%B3n\")",
+      "PowerShell(Get-NetTCPConnection -LocalPort 5000 -State Listen -ErrorAction SilentlyContinue | Select-Object -ExpandProperty OwningProcess | ForEach-Object { try { Stop-Process -Id $_ -Force -ErrorAction Stop } catch {} }; Start-Sleep -Milliseconds 400; Remove-Item \"E:\\\\Projetos\\\\REACT\\\\Networking\\\\server\\\\data-prodtest\" -Recurse -Force -ErrorAction SilentlyContinue; \"cleaned\")"
     ]
   }
 }

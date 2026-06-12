@@ -103,6 +103,18 @@ A documentação detalhada está na pasta [`docs/`](docs/):
 - [Funcionalidades em detalhe](docs/06-funcionalidades.md)
 - [Guia de desenvolvimento](docs/07-desenvolvimento.md)
 - [Roadmap](docs/08-roadmap.md)
+- [Deploy](docs/09-deploy.md)
+
+## ☁️ Deploy
+
+O projeto roda como **serviço único** (o Express serve o build do frontend + a API + SQLite).
+Já inclui `render.yaml` (Render) e `Dockerfile` (Railway/Fly). Em produção:
+
+```bash
+yarn build && yarn start   # NODE_ENV=production; serve dist/ + /api na mesma origem
+```
+
+Passo a passo e variáveis de ambiente em **[docs/09-deploy.md](docs/09-deploy.md)**.
 
 ## 📜 Scripts
 
